@@ -1,7 +1,7 @@
 // STYLES
 import * as S from './styled-header'
 
-function Header({ theme, setTheme }) {
+function Header({ isDarkTheme, setIsDarkTheme }) {
   return (
     <S.Header>
       <S.Column>
@@ -9,18 +9,13 @@ function Header({ theme, setTheme }) {
         <S.Subtitle>Total Followers: 23,004</S.Subtitle>
       </S.Column>
 
-      <S.Column activeTheme={theme}>
+      <S.Column activeTheme={isDarkTheme}>
         <span>Dark Mode</span>
         <S.Switch>
           <input
             type="checkbox"
-            onChange={() => {
-              if (theme) {
-                setTheme(false)
-              } else {
-                setTheme(true)
-              }
-            }}
+            value={isDarkTheme}
+            onChange={() => setIsDarkTheme(!isDarkTheme)}
           />
           <span className="slider" />
         </S.Switch>

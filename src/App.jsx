@@ -9,11 +9,11 @@ import dark from './themes/Dark'
 import light from './themes/Light'
 
 function App() {
-  const [theme, setTheme] = useState(false)
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
 
   return (
-    <ThemeProvider theme={theme ? dark : light}>
-      <Home theme={theme} setTheme={setTheme} />
+    <ThemeProvider theme={isDarkTheme ? dark : light}>
+      <Home isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
     </ThemeProvider>
   )
 }

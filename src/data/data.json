@@ -1,0 +1,174 @@
+{
+  "socialItems": [
+    {
+      "id": "1",
+      "socialMedia": "facebook",
+      "profile": "@nathanf",
+      "followers": "1987",
+      "data": "12",
+      "isUp": true
+    },
+
+    {
+      "id": "2",
+      "socialMedia": "twitter",
+      "profile": "@nathanf",
+      "followers": "1044",
+      "data": "99",
+      "isUp": true
+    },
+
+    {
+      "id": "3",
+      "socialMedia": "instagram",
+      "profile": "@realnathanf",
+      "followers": "11k",
+      "data": "1099",
+      "isUp": true
+    },
+
+    {
+      "id": "4",
+      "socialMedia": "youtube",
+      "profile": "Nathan F",
+      "followers": "8239",
+      "data": "155",
+      "isUp": false
+    }
+  ],
+
+  "overviewItems": [
+    {
+      "id": 1,
+      "title": "Page Views",
+      "socialMedia": "facebook",
+      "views": "87",
+      "data": 3,
+      "isUp": true
+    },
+
+    {
+      "id": 2,
+      "title": "Likes",
+      "socialMedia": "facebook",
+      "views": "52",
+      "data": 2,
+      "isUp": false
+    },
+
+    {
+      "id": 3,
+      "title": "Likes",
+      "socialMedia": "instagram",
+      "views": "5462",
+      "data": 2257,
+      "isUp": true
+    },
+
+    {
+      "id": 4,
+      "title": "Profile Views",
+      "socialMedia": "instagram",
+      "views": "52k",
+      "data": 1375,
+      "isUp": true
+    },
+
+    {
+      "id": 5,
+      "title": "Retweets",
+      "socialMedia": "twitter",
+      "views": "117",
+      "data": 303,
+      "isUp": true
+    },
+
+    {
+      "id": 6,
+      "title": "Likes",
+      "socialMedia": "twitter",
+      "views": "507",
+      "data": 553,
+      "isUp": true
+    },
+
+    {
+      "id": 7,
+      "title": "Likes",
+      "socialMedia": "youtube",
+      "views": "107",
+      "data": 19,
+      "isUp": false
+    },
+
+    {
+      "id": 8,
+      "title": "Total Views",
+      "socialMedia": "youtube",
+      "views": "1407",
+      "data": 12,
+      "isUp": false
+    }
+  ],
+
+  "chartdata": [
+    {
+      "days": "",
+      "followers": 4
+    },
+
+    {
+      "days": "4",
+      "followers": 3
+    },
+
+    {
+      "days": "5",
+      "followers": 2
+    },
+
+    {
+      "days": "6",
+      "followers": 6
+    },
+
+    {
+      "days": "7",
+      "followers": 8
+    },
+
+    {
+      "days": "8",
+      "followers": 9,
+      "pv": 3800,
+      "amt": 2500
+    },
+
+    {
+      "days": "9",
+      "followers": 10
+    },
+
+    {
+      "days": "10",
+      "followers": 9
+    },
+
+    {
+      "days": "11",
+      "followers": 10,
+      "pv": 4300,
+      "amt": 2100
+    },
+
+    {
+      "days": "12",
+      "followers": 12
+    },
+
+    {
+      "days": "13",
+      "followers": 12
+    }
+  ]
+}

@@ -1,40 +1,28 @@
+import { useState } from 'react'
+
 // COMPONENTS
 import SocialItem from '../SocialItem/SocialItem'
+
+// DATA
+import Data from '../../data/data.json'
 
 // STYLES
 import Social from './styled-socialcontainer'
 
-function SocialContainer() {
+function SocialContainer({ handleModal }) {
   return (
     <Social>
-      <SocialItem
-        socialMedia="facebook"
-        profile="@nathanf"
-        followers="1987"
-        data="12"
-        alert={true}
-      />
-      <SocialItem
-        socialMedia="twitter"
-        profile="@nathanf"
-        followers="1044"
-        data="99"
-        alert={true}
-      />
-      <SocialItem
-        socialMedia="instagram"
-        profile="@realnathanf"
-        followers="11k"
-        data="1099"
-        alert={true}
-      />
-      <SocialItem
-        socialMedia="youtube"
-        profile="Nathan F."
-        followers="8239"
-        data="144"
-        alert={false}
-      />
+      {Data.socialItems.map((item) => (
+        <SocialItem
+          key={item.id}
+          socialMedia={item.socialMedia}
+          profile={item.profile}
+          followers={item.followers}
+          data={item.data}
+          isUp={item.isUp}
+          handleModal={handleModal}
+        />
+      ))}
     </Social>
   )
 }

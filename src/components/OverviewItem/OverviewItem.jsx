@@ -1,10 +1,13 @@
+// COMPONENTS
+import Status from '../Status/Status'
+
 // STYLES
 import * as S from './styled-overviewitem'
 
 // HELPERS
 import { Icons } from '../../helpers/helpers'
 
-function OverviewItem({ title, socialMedia, views, data, alert }) {
+function OverviewItem({ title, socialMedia, views, data, isUp }) {
   return (
     <S.Box>
       <S.Heading>
@@ -22,7 +25,9 @@ function OverviewItem({ title, socialMedia, views, data, alert }) {
         </S.CColumn>
 
         <S.CColumn>
-          {alert ? <S.Up>{data}%</S.Up> : <S.Down>{data}%</S.Down>}
+          <Status position="overview" isUp={isUp}>
+            {data}%
+          </Status>
         </S.CColumn>
       </S.Content>
     </S.Box>

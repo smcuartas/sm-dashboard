@@ -1,3 +1,6 @@
+// COMPONENTS
+import Status from '../Status/Status'
+
 // STYLES
 import * as S from './styled-socialitem'
 
@@ -14,9 +17,16 @@ const Icons = {
   youtube: iYoutube,
 }
 
-function SocialItem({ socialMedia, profile, followers, data, alert }) {
+function SocialItem({
+  socialMedia,
+  profile,
+  followers,
+  data,
+  isUp,
+  handleModal,
+}) {
   return (
-    <S.Box socialMedia={socialMedia}>
+    <S.Box socialMedia={socialMedia} onClick={handleModal}>
       <S.SocialProfile>
         <img src={Icons[socialMedia]} alt="Social Icon" />
         <span>{profile}</span>
@@ -28,8 +38,9 @@ function SocialItem({ socialMedia, profile, followers, data, alert }) {
           {socialMedia === 'youtube' ? 'Subscribers' : 'Followers'}
         </span>
       </S.Followers>
-
-      {alert ? <S.Up>{data} Today</S.Up> : <S.Down>{data} Today</S.Down>}
+      <Status position="social" isUp={isUp}>
+        {data} Today
+      </Status>
     </S.Box>
   )
 }

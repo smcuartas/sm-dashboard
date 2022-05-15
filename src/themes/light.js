@@ -1,11 +1,14 @@
 const light = {
   bg: 'hsl(0, 0%, 100%)',
   topbg: 'hsl(225, 100%, 98%)',
-  cardbg: 'hsl(227, 47%, 96%)',
+  cardbg: {
+    normal: 'hsl(227, 47%, 96%)',
+    hover: 'hsl(232, 33%, 91%)',
+  },
+  charts: 'hsl(243, 51%, 70%)',
   text: {
     primary: 'hsl(230, 17%, 14%)',
     secondary: 'hsl(228, 12%, 44%)',
-    alter: 'hsl(243, 51%, 70%)',
   },
   social: {
     fb: 'hsl(203, 89%, 53%)',

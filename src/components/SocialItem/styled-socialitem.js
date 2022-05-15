@@ -1,22 +1,22 @@
 import styled from 'styled-components'
 
-// MEDIA
-import iUp from '../../img/icon-up.svg'
-import iDown from '../../img/icon-down.svg'
-
 export const Box = styled.article`
   display: block;
   position: relative;
   border-radius: 5px;
   padding: 30px;
   text-align: center;
-  background: ${({ theme }) => theme.cardbg};
+  background: ${({ theme }) => theme.cardbg.normal};
   overflow: hidden;
   cursor: pointer;
 
+  .socialStatus {
+    justify-content: center;
+  }
+
   :hover {
     transform: translateY(5px);
-    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1);
+    background: ${({ theme }) => theme.cardbg.hover};
   }
 
   :before {
@@ -81,37 +81,5 @@ export const Followers = styled.div`
     letter-spacing: 6px;
     font-size: 14px;
     color: ${({ theme }) => theme.text.primary};
-  }
-`
-
-export const Up = styled.span`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  color: hsl(163, 72%, 41%);
-  font-size: 14px;
-  font-weight: 700;
-
-  :before {
-    content: url(${iUp});
-    margin-right: 5px;
-    transform: translateY(-2px);
-  }
-`
-
-export const Down = styled.span`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  color: hsl(356, 69%, 56%);
-  font-size: 14px;
-  font-weight: 700;
-
-  :before {
-    content: url(${iDown});
-    margin-right: 5px;
-    transform: translateY(-2px);
   }
 `
