@@ -7,9 +7,9 @@ import * as S from './styled-overviewitem'
 // HELPERS
 import { Icons } from '../../helpers/helpers'
 
-function OverviewItem({ title, socialMedia, views, data, isUp }) {
+function OverviewItem({ title, socialMedia, views, data, isUp, handleModal }) {
   return (
-    <S.Box>
+    <S.Box onClick={handleModal}>
       <S.Heading>
         <S.HColumn>
           <h3 className="views-title">{title}</h3>

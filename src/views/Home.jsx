@@ -35,7 +35,10 @@ function Home({ isDarkTheme, setIsDarkTheme }) {
       <main>
         <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
         <SocialContainer handleModal={handleModal} />
-        <OverviewContainer isDarkTheme={isDarkTheme} />
+        <OverviewContainer
+          isDarkTheme={isDarkTheme}
+          handleModal={handleModal}
+        />
 
         {modal && (
           <Modal

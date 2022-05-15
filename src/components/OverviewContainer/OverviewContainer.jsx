@@ -7,7 +7,7 @@ import data from '../../data/data.json'
 // STYLE
 import * as S from './styled-overviewcontainer'
 
-function OverviewContainer({ isDarkTheme }) {
+function OverviewContainer({ isDarkTheme, handleModal }) {
   return (
     <>
       <S.Subtitle activeTheme={isDarkTheme}>Overview - Today</S.Subtitle>
@@ -20,6 +20,7 @@ function OverviewContainer({ isDarkTheme }) {
             views={item.views}
             data={item.data}
             isUp={item.isUp}
+            handleModal={handleModal}
           />
         ))}
       </S.Container>
