@@ -104,7 +104,7 @@ export const Column = styled.div`
       right: 0;
       padding: 10px 15px;
       border-radius: 50px 0 0 50px;
-      background: ${({ theme }) => theme.topbg};
+      background: ${({ theme }) => theme.cardbg.hover};
       z-index: 10;
     }
   }

@@ -29,7 +29,7 @@ export const ModalContent = styled.div`
   border-radius: 20px;
   background: ${({ theme }) => theme.bg};
   overflow: hidden;
-  margin: 30px;
+  margin: 30px 15px;
 `
 
 export const Header = styled.div`
@@ -117,6 +117,6 @@ export const Graphic = styled.div`
   padding: 35px 50px 50px 50px;
 
   @media (max-width: 767px) {
-    padding: 25px 25px 50px 25px;
+    padding: 35px 20px 50px 20px;
   }
 `
