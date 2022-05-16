@@ -564,7 +564,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   padding: 35px 50px 50px 50px;
 
   @media (max-width: 767px) {
-    padding: 25px 25px 50px 25px;
+    padding: 35px 10px 50px 10px;
   }
 `;function dG({handleModal:e,animateModal:t,isDarkTheme:r}){return R(nG,{className:t?"animate":"",children:ve(iG,{children:[ve(aG,{children:[R(oG,{children:"Facebook followers"}),ve(uG,{children:[R("img",{src:Ah.facebook,alt:"Social Icon"}),R("span",{children:"@nathan"})]}),R(cG,{onClick:e,activeTheme:r,children:R("img",{src:Ah.close,alt:"Close Icon"})}),ve(lG,{children:[ve("div",{children:[R(sG,{children:"1987"}),ve(Ed,{children:["Total ",R("span",{children:"followers"})]})]}),ve("div",{children:[R(es,{isUp:!0,position:"modal",children:"81"}),ve(Ed,{children:["New followers in",R("span",{children:"the past 10 days"})]})]}),ve("div",{children:[R(es,{isUp:!0,position:"modal",children:"12"}),ve(Ed,{children:["New followers ",R("span",{children:"TODAY"})]})]})]})]}),R(fG,{children:R(rG,{isDarkTheme:r})})]})})}const hG=yE`
     *{
