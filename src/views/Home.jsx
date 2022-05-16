@@ -31,7 +31,7 @@ function Home({ isDarkTheme, setIsDarkTheme }) {
 
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle modal={modal} />
       <main>
         <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
         <SocialContainer handleModal={handleModal} />

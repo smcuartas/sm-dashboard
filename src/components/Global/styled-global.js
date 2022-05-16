@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
         position:relative;
         background: ${({ theme }) => theme.bg};
         padding:50px;
+        overflow: ${({ modal }) => (modal ? 'hidden' : null)};
 
         :after{
             content:'';
@@ -23,6 +24,8 @@ const GlobalStyle = createGlobalStyle`
             background: ${({ theme }) => theme.topbg};
             z-index:-1;
         }
+
+        
 
         @media(max-width:767px){
             padding:50px 25px;

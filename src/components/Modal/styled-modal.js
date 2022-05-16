@@ -4,16 +4,20 @@ export const ModalContainer = styled.div`
   position: fixed;
   z-index: 10;
   display: flex;
+  flex: 1 1 auto;
   justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 0px;
+  overflow-y: auto;
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition-duration: 0.5s;
-  overflow: hidden;
+  padding: 30px 15px;
+  box-sizing: border-box;
 
   &.animate {
     opacity: 1;
@@ -21,15 +25,14 @@ export const ModalContainer = styled.div`
 `
 
 export const ModalContent = styled.div`
-  position: relative;
   display: block;
+  position: relative;
   margin: auto;
   width: 100%;
-  max-width: 1280px;
+  max-width: 992px;
   border-radius: 20px;
   background: ${({ theme }) => theme.bg};
   overflow: hidden;
-  margin: 30px 15px;
 `
 
 export const Header = styled.div`
