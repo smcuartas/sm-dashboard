@@ -9,13 +9,13 @@ import {
 } from 'recharts'
 
 // DATA
-import data from '../../data/data.json'
+import chart from '../../data/chart.json'
 
 // STYLES
 import * as S from './styled-chart'
 
 function Chart({ isDarkTheme }) {
-  function customTooltype({ active, payload }) {
+  function customTooltip({ active, payload }) {
     if (active) {
       return (
         <S.Tooltip>{`${payload[0].value} new ${payload[0].name}`}</S.Tooltip>
@@ -27,8 +27,10 @@ function Chart({ isDarkTheme }) {
 
   return (
     <S.Container>
+      <S.Date>May 4 - May 13</S.Date>
+
       <ResponsiveContainer width="100%" height={280}>
-        <LineChart width={600} height={300} data={data.chartdata}>
+        <LineChart width={600} height={300} data={chart.chartdata}>
           <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
           <XAxis
             tickCount={1}
@@ -36,7 +38,6 @@ function Chart({ isDarkTheme }) {
             tickLine={false}
             dataKey="days"
             strokeWidth={1.5}
-            stroke={isDarkTheme ? 'white' : '#ccc'}
           />
           <YAxis
             width={25}
@@ -45,17 +46,18 @@ function Chart({ isDarkTheme }) {
             minTickGap={10}
             tickLine={false}
             strokeWidth={1.5}
-            stroke={isDarkTheme ? 'white' : '#ccc'}
           />
           <Line
+            animationBegin={0}
+            animationDuration={0}
             type="monotone"
             dataKey="followers"
             stroke="hsl(243, 51%, 70%)"
             strokeWidth={1.5}
             dot={{ r: 5 }}
-            activeDot={{ r: 7 }}
+            activeDot={{ r: 7, stroke: null }}
           />
-          <Tooltip content={customTooltype} />
+          <Tooltip content={customTooltip} />
         </LineChart>
       </ResponsiveContainer>
     </S.Container>

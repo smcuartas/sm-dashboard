@@ -21,7 +21,7 @@ export const Box = styled.article`
 
 export const Heading = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 20px;
 `
 
 export const HColumn = styled.div`

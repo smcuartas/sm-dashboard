@@ -5,7 +5,10 @@ const dark = {
     normal: 'hsl(228, 28%, 20%)',
     hover: 'hsl(228, 26%, 27%)',
   },
-  charts: 'hsl(243, 51%, 70%)',
+  charts: {
+    line: 'hsl(243, 51%, 70%)',
+    axisLine: 'hsl(228, 17%, 66%)',
+  },
   text: {
     primary: 'hsl(0, 0%, 100%)',
     secondary: 'hsl(228, 34%, 66%)',

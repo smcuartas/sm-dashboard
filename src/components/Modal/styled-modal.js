@@ -13,6 +13,7 @@ export const ModalContainer = styled.div`
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition-duration: 0.5s;
+  overflow: hidden;
 
   &.animate {
     opacity: 1;
@@ -80,7 +81,7 @@ export const Followers = styled.span`
   color: ${({ theme }) => theme.text.secondary};
   font-size: 40px;
   font-weight: 700;
-  width: 100%;
+  width: autohku;
   margin-right: 10px;
 `
 
@@ -90,6 +91,12 @@ export const Text = styled.p`
   span {
     width: 100%;
     display: block;
+  }
+
+  @media (max-width: 992px) {
+    span {
+      display: inline;
+    }
   }
 `
 
@@ -107,5 +114,9 @@ export const CloseModal = styled.span`
 `
 
 export const Graphic = styled.div`
-  padding: 25px 50px 50px 50px;
+  padding: 35px 50px 50px 50px;
+
+  @media (max-width: 767px) {
+    padding: 25px 25px 50px 25px;
+  }
 `
