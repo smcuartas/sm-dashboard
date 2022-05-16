@@ -469,30 +469,33 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   position: fixed;
   z-index: 10;
   display: flex;
+  flex: 1 1 auto;
   justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 0px;
+  overflow-y: auto;
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition-duration: 0.5s;
-  overflow: hidden;
+  padding: 30px 15px;
+  box-sizing: border-box;
 
   &.animate {
     opacity: 1;
   }
 `,iG=Ee.div`
-  position: relative;
   display: block;
+  position: relative;
   margin: auto;
   width: 100%;
-  max-width: 1280px;
+  max-width: 992px;
   border-radius: 20px;
   background: ${({theme:e})=>e.bg};
   overflow: hidden;
-  margin: 30px 15px;
 `,aG=Ee.div`
   display: block;
   padding: 50px 50px 25px 50px;
@@ -578,6 +581,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         position:relative;
         background: ${({theme:e})=>e.bg};
         padding:50px;
+        overflow: ${({modal:e})=>e?"hidden":null};
 
         :after{
             content:'';
@@ -590,6 +594,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             z-index:-1;
         }
 
+        
+
         @media(max-width:767px){
             padding:50px 25px;
         }
@@ -600,4 +606,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         width:100%;
         max-width:1440px;
     }
-`;function pG({isDarkTheme:e,setIsDarkTheme:t}){const[r,n]=K.exports.useState(!1),[i,a]=K.exports.useState(!1),o=()=>{r?(a(!1),setTimeout(()=>{n(!1)},500)):(n(!0),setTimeout(()=>{a(!0)},0))};return ve(Zv,{children:[R(hG,{}),ve("main",{children:[R($E,{isDarkTheme:e,setIsDarkTheme:t}),R(zE,{handleModal:o}),R(YE,{isDarkTheme:e,handleModal:o}),r&&R(dG,{isDarkTheme:e,handleModal:o,animateModal:i})]})]})}const vG={bg:"hsl(230, 17%, 14%)",topbg:"hsl(232, 19%, 15%)",cardbg:{normal:"hsl(228, 28%, 20%)",hover:"hsl(228, 26%, 27%)"},charts:{line:"hsl(243, 51%, 70%)",axisLine:"hsl(228, 17%, 66%)"},text:{primary:"hsl(0, 0%, 100%)",secondary:"hsl(228, 34%, 66%)"},social:{fb:"hsl(195, 100%, 50%)",tw:"hsl(203, 89%, 53%)",ig:"hsl(37, 97%, 70%)0%, hsl(329, 70%, 58%) 100%",yt:"hsl(348, 97%, 39%)"}},yG={bg:"hsl(0, 0%, 100%)",topbg:"hsl(225, 100%, 98%)",cardbg:{normal:"hsl(227, 47%, 96%)",hover:"hsl(232, 33%, 91%)"},charts:{line:"hsl(243, 51%, 70%)",axisLine:"hsl(222, 11%, 65%)"},text:{primary:"hsl(230, 17%, 14%)",secondary:"hsl(228, 12%, 44%)"},social:{fb:"hsl(203, 89%, 53%)",tw:"hsl(195, 100%, 50%)",ig:"hsl(37, 97%, 70%)0%, hsl(329, 70%, 58%) 100%",yt:"hsl(348, 97%, 39%)"}};function gG(){const[e,t]=K.exports.useState(!1);return R(pE,{theme:e?vG:yG,children:R(pG,{isDarkTheme:e,setIsDarkTheme:t})})}Td.createRoot(document.getElementById("root")).render(R(de.StrictMode,{children:R(gG,{})}));
+`;function pG({isDarkTheme:e,setIsDarkTheme:t}){const[r,n]=K.exports.useState(!1),[i,a]=K.exports.useState(!1),o=()=>{r?(a(!1),setTimeout(()=>{n(!1)},500)):(n(!0),setTimeout(()=>{a(!0)},0))};return ve(Zv,{children:[R(hG,{modal:r}),ve("main",{children:[R($E,{isDarkTheme:e,setIsDarkTheme:t}),R(zE,{handleModal:o}),R(YE,{isDarkTheme:e,handleModal:o}),r&&R(dG,{isDarkTheme:e,handleModal:o,animateModal:i})]})]})}const vG={bg:"hsl(230, 17%, 14%)",topbg:"hsl(232, 19%, 15%)",cardbg:{normal:"hsl(228, 28%, 20%)",hover:"hsl(228, 26%, 27%)"},charts:{line:"hsl(243, 51%, 70%)",axisLine:"hsl(228, 17%, 66%)"},text:{primary:"hsl(0, 0%, 100%)",secondary:"hsl(228, 34%, 66%)"},social:{fb:"hsl(195, 100%, 50%)",tw:"hsl(203, 89%, 53%)",ig:"hsl(37, 97%, 70%)0%, hsl(329, 70%, 58%) 100%",yt:"hsl(348, 97%, 39%)"}},yG={bg:"hsl(0, 0%, 100%)",topbg:"hsl(225, 100%, 98%)",cardbg:{normal:"hsl(227, 47%, 96%)",hover:"hsl(232, 33%, 91%)"},charts:{line:"hsl(243, 51%, 70%)",axisLine:"hsl(222, 11%, 65%)"},text:{primary:"hsl(230, 17%, 14%)",secondary:"hsl(228, 12%, 44%)"},social:{fb:"hsl(203, 89%, 53%)",tw:"hsl(195, 100%, 50%)",ig:"hsl(37, 97%, 70%)0%, hsl(329, 70%, 58%) 100%",yt:"hsl(348, 97%, 39%)"}};function gG(){const[e,t]=K.exports.useState(!1);return R(pE,{theme:e?vG:yG,children:R(pG,{isDarkTheme:e,setIsDarkTheme:t})})}Td.createRoot(document.getElementById("root")).render(R(de.StrictMode,{children:R(gG,{})}));
